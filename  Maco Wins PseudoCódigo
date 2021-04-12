@@ -1,0 +1,79 @@
+** Maco Wins **
+
+enum Tipo {
+	Saco, Pantalon, Camisa;
+}
+
+class Prenda {
+	const tipo: Tipo
+	var precio: double
+	var estado: Estado
+
+	// Constructor
+	// Getters y setters
+
+	double precioDeVenta() {
+		return this.estado.precioDeVenta(precio)
+	}
+}
+
+interface Estado {
+	double precioDeVenta(double precio)
+}
+
+class Nuevo implements Estado {
+	double precioDeVenta(double precio) {
+		return precio;
+	}
+}
+
+class Liquidacion implements Estado {
+	var porcentajeALiquidar = 0.5
+	
+	double precioDeVenta(double precio) {
+		return precio * porcentajeALiquidar
+	}
+}
+
+class Promocion implements Estado {
+	var valorFijo
+
+	double precioDeVenta(double precio) {
+		return precio - valorFijo
+	}
+}
+
+class Venta {
+	const fechaVenta
+	var articulos: [Prendas] 
+	var metodoDePago
+
+}
+
+interface MetodoDePago {
+	double alterarMontoTotal(articulos)
+}
+
+class Efectivo implements MetodoDePago {
+	double alterarMontoTotal(articulos)
+}
+
+class Tarjeta implements MetodoDePago {
+	var cantidadDeCuotas
+	var coeficienteFijo
+
+	double alterarMontoTotal(articulos)
+}
+
+object Macowins {
+	var ventas: [Venta]
+
+	double gananciasDelDia(dia) {}
+}
+
+
+Aclaraciones / Dudas: 
+0) No sé si es un pseudocódigo aceptable, mezclé un poco cada lenguaje de programación que tenía en la cabeza (sin querer).
+1) Problemas para decidir si Estado es una interfaz o una clase abstracta; lo mismo me pasó con MetodoDePago: si bien entiendo que una clase abstracta se utiliza cuando comparten comportamiento y una interfaz solo al compartir la firma del método, me cuesta un poco esa diferencia. En PDeP usabamos mucho clases abstractas.
+2) No creo que "alterarMontoTotal" sea el mejor nombre para un método (dentro de la interfaz metodo de pago).
+3) No me convence que el MetodoDePago reciba los articulos (los necesito para hacer la operación en tarjeta), pensé en pasarle la venta en sí pero me parecio demasiada información.
