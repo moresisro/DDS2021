@@ -69,7 +69,7 @@ class Tarjeta implements MetodoDePago {
 	double alterarMontoFinal(articulos)
 }
 
-object Macowins {
+object macowins {
 	var ventas: [Venta]
 
 	double determinarGanancias(dia) {}
@@ -81,3 +81,4 @@ Aclaraciones / Dudas:
 1) Problemas para decidir si Estado es una interfaz o una clase abstracta; lo mismo me pasó con MetodoDePago: si bien entiendo que una clase abstracta se utiliza cuando comparten comportamiento y una interfaz solo al compartir la firma del método, me cuesta un poco esa diferencia. En PDeP usabamos mucho clases abstractas.
 2) No creo que "alterarMontoFinal" sea el mejor nombre para un método (dentro de la interfaz metodo de pago).
 3) No me convence que el MetodoDePago reciba los articulos (los necesito para hacer la operación en tarjeta), pensé en pasarle la venta en sí pero me parecio demasiada información.
+4) ¿Está bien que Macowins sea un objeto?
