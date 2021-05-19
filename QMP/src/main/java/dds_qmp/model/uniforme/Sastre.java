@@ -1,4 +1,6 @@
-package dds_qmp;
+package dds_qmp.model.uniforme;
+
+import dds_qmp.model.prenda.Prenda;
 
 abstract public class Sastre {
 

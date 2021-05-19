@@ -1,4 +1,4 @@
-package dds_qmp;
+package dds_qmp.model.prenda;
 
 public enum Material {
   ALGODON,

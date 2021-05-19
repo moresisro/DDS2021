@@ -1,8 +1,8 @@
-package dds_qmp;
+package dds_qmp.model.prenda;
 
 public enum Categoria {
   PARTE_SUPERIOR,
-  CALZADO,
   PARTE_INFERIOR,
+  CALZADO,
   ACCESORIOS
 }

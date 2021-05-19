@@ -1,4 +1,6 @@
-package dds_qmp;
+package dds_qmp.model;
+import dds_qmp.model.prenda.Prenda;
+
 import java.util.List;
 
 public class Usuario {
