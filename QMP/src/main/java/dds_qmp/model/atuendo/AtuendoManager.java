@@ -1,19 +1,24 @@
 package dds_qmp.model.atuendo;
 
+import dds_qmp.model.guardarropas.Guardarropas;
 import dds_qmp.model.prenda.Prenda;
-import services.AccuWeatherService;
+import services.ServicioMeteorologicoAccuWeather;
 import services.Clima;
 
 import java.util.List;
 
 public class AtuendoManager {
-  private AccuWeatherService weatherService;
-  private List<Prenda> ropaDisponible;
+  private ServicioMeteorologicoAccuWeather servicioMeteorologico;
+  private Guardarropas guardarropas;
   private Clima clima;
 
   public AtuendoManager(List<Prenda> ropaDisponible) {
-    this.weatherService = new AccuWeatherService();
-    this.ropaDisponible = ropaDisponible;
+    //this.weatherService = new ServicioMeteorologico();
+    //this.ropaDisponible = ropaDisponible;
+  }
+
+  public Atuendo sugerirAtuendo(String location, Guardarropas guardarropas) {
+
   }
 
   public void obtenerClimaDeHoy() {

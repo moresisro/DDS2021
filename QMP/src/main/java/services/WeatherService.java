@@ -1,5 +1,7 @@
 package services;
 
+import java.util.Map;
+
 public interface WeatherService {
-  public int getWeather(String ciudad);
+  public Clima obtenerCondicionesClimaticas(String location);
 }

@@ -1,7 +1,7 @@
 package services;
 import java.util.*;
 
-public class AccuWeatherAPI {
+public final class AccuWeatherAPI {
 
   public final List<Map<String, Object>> getWeather(String ciudad) {
     return Arrays.asList(new HashMap<String, Object>(){{
